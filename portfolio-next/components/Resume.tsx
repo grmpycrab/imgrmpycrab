@@ -23,6 +23,32 @@ export function Resume() {
     };
   }, [resumeOpen, closeResume]);
 
+  const handlePrint = () => {
+    const cvEl = document.getElementById("cv-print-root");
+    if (!cvEl) { window.print(); return; }
+    const win = window.open("", "_blank");
+    if (!win) { window.print(); return; }
+    const styleLinks = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+      .map((el) => el.outerHTML).join("\n");
+    win.document.write(`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+${styleLinks}
+<style>
+  html, body { background: #fff !important; margin: 0; padding: 0; }
+  .cv { box-shadow: none !important; padding: 32px 36px !important; max-width: 100% !important; }
+  @page { size: A4; margin: 14mm; }
+</style>
+</head>
+<body class="${document.body.className}">
+${cvEl.outerHTML}
+</body>
+</html>`);
+    win.document.close();
+    setTimeout(() => { win.focus(); win.print(); win.close(); }, 600);
+  };
+
   return (
     <AnimatePresence>
       {resumeOpen && (
@@ -52,7 +78,7 @@ export function Resume() {
                 <span className="faint" style={{ marginLeft: 8 }}>1 PAGE · PDF READY</span>
               </div>
               <div className="resume-modal__bar-right">
-                <button className="resume-btn" onClick={() => window.print()}>
+                <button className="resume-btn" onClick={handlePrint}>
                   <I.download />
                   DOWNLOAD PDF
                 </button>

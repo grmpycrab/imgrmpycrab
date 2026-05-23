@@ -52,11 +52,11 @@ export function ResumeDoc() {
         <div className="cv__contact">
           <div className="cv__photo" aria-hidden="true" />
           <div className="cv__contact-rows">
-            <div><span className="k">Location</span><span className="v">Obrero, Davao City, PH</span></div>
-            <div><span className="k">Email</span><span className="v">[ replace ]</span></div>
-            <div><span className="k">Phone</span><span className="v">+63 XXX XXX XXXX</span></div>
+            <div><span className="k">Location</span><span className="v">Mati City, Davao Oriental, PH</span></div>
+            <div><span className="k">Email</span><span className="v">keyntharly@gmail.com</span></div>
+            <div><span className="k">Phone</span><span className="v">+63 994 939 0161</span></div>
             <div><span className="k">Portfolio</span><span className="v">side-a-side-b</span></div>
-            <div><span className="k">GitHub</span><span className="v">[ replace ]</span></div>
+            <div><span className="k">GitHub</span><span className="v">github/@grmpycrab</span></div>
             <div><span className="k">ORCID</span><span className="v">0009-0008-8583-5643</span></div>
           </div>
         </div>

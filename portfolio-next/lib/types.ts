@@ -21,6 +21,7 @@ export type DevProject = {
   desc: string;
   year: string;
   stack: string;
+  link?: string; // full GitHub URL when it can't be derived from name
 };
 
 export type DesignCase = {
@@ -39,4 +40,5 @@ export type MediaClip = {
   t: string;
   s: string;
   pub: string;
+  link?: string; // Facebook (or other) URL for this clip
 };

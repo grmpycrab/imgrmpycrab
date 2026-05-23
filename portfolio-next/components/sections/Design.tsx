@@ -20,6 +20,11 @@ export function Design() {
         </div>
       </div>
 
+      <div className="wip-banner">
+        <span className="pill">COMING SOON</span>
+        <span>Designs are still in progress — layouts shown are placeholders, not my actual work.</span>
+      </div>
+
       <div className="design-grid stagger">
         {DESIGN_CASES.map((c) => (
           <div className={"case" + (c.wide ? " case--wide" : "")} key={c.name}>

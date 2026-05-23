@@ -29,7 +29,7 @@ export function Developer() {
             <span className="name">~/keynt/identity — zsh</span>
           </div>
           <div className="terminal__body">
-            <div className="term-line"><span className="term-prompt">keynt@studio</span> <span className="term-out">~ %</span> <span className="term-cmd">cat about.dev</span></div>
+            <div className="term-line"><span className="term-prompt">@grmpycrab</span> <span className="term-out">~ %</span> <span className="term-cmd">cat about.dev</span></div>
             <div className="term-line term-out">name        : Keynt Harly Adol</div>
             <div className="term-line term-out">role        : Mobile + Full-stack engineer</div>
             <div className="term-line term-out">primary     : Flutter / Dart</div>
@@ -37,13 +37,13 @@ export function Developer() {
             <div className="term-line term-out">infra       : Firebase, Vercel, Cloudflare</div>
             <div className="term-line term-out">currently   : open to internships &amp; collabs</div>
             <br />
-            <div className="term-line"><span className="term-prompt">keynt@studio</span> <span className="term-out">~ %</span> <span className="term-cmd">ls projects/</span></div>
-            <div className="term-line term-out">  echonotes/  campusly/  sari-sari-os/  side-quests/</div>
+            <div className="term-line"><span className="term-prompt">@grmpycrab</span> <span className="term-out">~ %</span> <span className="term-cmd">ls projects/</span></div>
+            <div className="term-line term-out">  harmonica/  TrekScan+/  Hamiguitan Admin Dashboard/  side-quests/</div>
             <br />
             <div className="term-line"><span className="term-prompt">keynt@studio</span> <span className="term-out">~ %</span> <span className="term-cmd">tail -f deploy.log</span></div>
-            <div className="term-line term-out">[14:02] echonotes  ✓ 1.4.0 → testflight</div>
-            <div className="term-line term-out">[14:18] campusly   ✓ android beta · 312 users</div>
-            <div className="term-line term-out">[14:31] sari-sari  ✓ vercel prod · edge regions: 14</div>
+            <div className="term-line term-out">[14:02] harmonica  ✓ 1.0.0 → testflight</div>
+            <div className="term-line term-out">[14:18] TrekScan+   ✓ android beta · 43 users</div>
+            <div className="term-line term-out">[14:31] Hamiguitan Admin Dashboard  ✓ firebase deployed</div>
             <br />
             <div className="term-line"><span className="term-prompt">keynt@studio</span> <span className="term-out">~ %</span> <span className="term-caret" /></div>
           </div>
@@ -79,7 +79,7 @@ export function Developer() {
             </div>
             <div className="project-card__meta">
               <span>{p.stack}</span>
-              <a href="#" style={{ color: "var(--accent)", textDecoration: "none", display: "inline-flex", gap: 6, alignItems: "center" }}>OPEN <I.ext /></a>
+              <a href={p.link ?? `https://github.com/grmpycrab/${p.name.toLowerCase().replace(/\s+/g, "-")}`} style={{ color: "var(--accent)", textDecoration: "none", display: "inline-flex", gap: 6, alignItems: "center" }}>OPEN <I.ext /></a>
             </div>
           </div>
         ))}
@@ -90,7 +90,7 @@ export function Developer() {
             <div className="card__title" style={{ marginTop: 6 }}>40+ public repos · main + small open-source</div>
             <div className="card__desc">From small Flutter widgets to a CLI for renaming photo batches by EXIF tag.</div>
           </div>
-          <a href="#" className="embed__btn" style={{ textDecoration: "none" }}><I.github /></a>
+          <a href="https://github.com/grmpycrab" className="embed__btn" style={{ textDecoration: "none" }}><I.github /></a>
         </div>
       </div>
     </div>

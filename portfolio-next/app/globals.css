@@ -666,6 +666,15 @@ hr.rule-strong { border: 0; height: 1px; background: var(--line-strong); width: 
 .project-card__meta { display: flex; justify-content: space-between; font-family: var(--geist-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-dim); margin-top: 12px; }
 
 /* ─── DESIGN SECTION (minimal) ────────────────── */
+.wip-banner {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  max-width: 1320px; margin: 0 auto 32px;
+  border: 1px dashed var(--line-strong); border-radius: 8px;
+  padding: 12px 16px;
+  font-family: var(--geist-mono); font-size: 12px; color: var(--fg-dim);
+  letter-spacing: 0.08em;
+}
+.wip-banner .pill { flex: none; }
 [data-theme="design"] .section-head__title { font-family: var(--geist-sans); }
 .design-grid {
   max-width: 1320px; margin: 0 auto; display: grid;
@@ -723,8 +732,6 @@ hr.rule-strong { border: 0; height: 1px; background: var(--line-strong); width: 
 .process__d { color: var(--fg-dim); font-size: 13px; line-height: 1.55; }
 
 /* ─── MEDIA SECTION (editorial) ───────────────── */
-[data-theme="media"] body, [data-theme="media"] {
-}
 [data-theme="media"] .section-head__title { font-family: var(--display-headline); font-weight: 800; letter-spacing: -0.025em; }
 [data-theme="media"] .section-head__title em { font-style: italic; color: var(--accent); font-family: var(--display-headline); }
 
@@ -783,12 +790,7 @@ hr.rule-strong { border: 0; height: 1px; background: var(--line-strong); width: 
 .fb-post__h .who { font-weight: 600; font-size: 13px; }
 .fb-post__h .when { font-family: var(--geist-mono); font-size: 10px; color: var(--fg-dim); letter-spacing: 0.10em; text-transform: uppercase; }
 .fb-post__body { font-family: var(--slab); font-size: 15px; line-height: 1.55; }
-.fb-post__art {
-  height: 160px; background: var(--bg-elev-2);
-  background-image: repeating-linear-gradient(-45deg, transparent 0 10px, rgba(21,17,10,0.06) 10px 11px);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--geist-mono); font-size: 11px; color: var(--fg-dim); letter-spacing: 0.12em; text-transform: uppercase;
-}
+.fb-post__art { overflow: hidden; line-height: 0; }
 .fb-post__foot { display: flex; justify-content: space-between; font-family: var(--geist-mono); font-size: 10px; color: var(--fg-dim); letter-spacing: 0.12em; text-transform: uppercase; }
 
 .sidebar__h {
@@ -804,6 +806,8 @@ hr.rule-strong { border: 0; height: 1px; background: var(--line-strong); width: 
 .clip__t { font-family: var(--display-headline); font-weight: 700; font-size: 17px; line-height: 1.2; letter-spacing: -0.01em; }
 .clip__s { font-family: var(--geist-mono); font-size: 10px; color: var(--fg-dim); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 4px; }
 .clip__pub { font-family: var(--geist-mono); font-size: 10px; color: var(--fg-dim); letter-spacing: 0.12em; text-transform: uppercase; align-self: start; }
+.see-more { display: block; margin-top: 14px; font-family: var(--geist-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+.see-more:hover { text-decoration: underline; }
 
 /* ─── RESEARCH SECTION (academic) ─────────────── */
 [data-theme="research"] .section-head__title { font-family: var(--slab); font-weight: 500; letter-spacing: -0.025em; }
@@ -1331,11 +1335,7 @@ hr.rule-strong { border: 0; height: 1px; background: var(--line-strong); width: 
 
 /* Print: hide everything except the CV when the user uses browser print/save-PDF */
 @media print {
-  body * { visibility: hidden !important; }
-  .resume-modal, .resume-modal * { visibility: visible !important; }
-  .resume-modal { position: fixed !important; inset: 0 !important; box-shadow: none !important; border-radius: 0 !important; }
-  .resume-modal__bar { display: none !important; }
-  .resume-scroll { padding: 0 !important; background: #fff !important; overflow: visible !important; }
+  html, body { background: #fff !important; margin: 0; padding: 0; }
   .cv { box-shadow: none !important; padding: 32px 36px !important; max-width: 100% !important; }
   @page { size: A4; margin: 14mm; }
 }

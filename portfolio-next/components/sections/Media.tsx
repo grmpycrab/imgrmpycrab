@@ -1,7 +1,6 @@
 "use client";
 
 import { MEDIA_CLIPS } from "@/lib/projects";
-import { I } from "../Icons";
 
 export function Media() {
   return (
@@ -21,8 +20,7 @@ export function Media() {
           <h1 className="section-head__title">Press <em>run.</em></h1>
         </div>
         <div className="section-head__lead">
-          I write, I anchor, I edit. Literary editing and video work at <strong>Ang Sidlakan
-          Publication</strong>; news anchoring with the University Student Council&apos;s <em>Ang Subang</em>.
+          I write, edit, and anchor for <strong>Ang Sidlakan Publication</strong> — the official student publication of <strong>Davao Oriental State University</strong>. From news coverage to literary editing to video work, I shape the stories that shape campus culture. This section collects clips, cuts, and columns I had a hand in shaping.
         </div>
       </div>
 
@@ -32,7 +30,15 @@ export function Media() {
           <div className="lede__h">Editing the campus voice, one column at a time.</div>
           <div className="lede__byline">BY <strong>K. H. ADOL</strong> · ANG SIDLAKAN PUBLICATION · 2025 — PRESENT</div>
           <div className="lede__art">
-            <span className="play-pill"><I.play /> SELECTED VIDEO CUT · 04:12</span>
+            <iframe
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAngSidlakanPublication%2Fvideos%2F482236908214652%2F&show_text=false&width=560&t=0"
+              width="96%"
+              height="375"
+              style={{ border: "none", display: "block" }}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+            />
           </div>
           <div className="lede__cols">
             <p>I&apos;ve been part of Ang Sidlakan since 2024 — first as a news writer covering the campus beat, then moving into literary editing and video work in 2025. The newsroom is small and the deadlines are real.</p>
@@ -44,42 +50,61 @@ export function Media() {
 
         <aside className="sidebar">
           <div className="fb-post">
-            <div className="fb-post__h">
-              <div className="avatar" />
-              <div>
-                <div className="who">Ang Sidlakan Publication</div>
-                <div className="when">RECENT · PUBLIC</div>
-              </div>
-            </div>
-            <div className="fb-post__body">
-              Featured cut edited by <strong>K. H. Adol</strong> — campus literary feature, with photography and a short companion video. Drop the real Facebook embed snippet here.
-            </div>
-            <div className="fb-post__art">[ FACEBOOK POST EMBED — paste real share ]</div>
-            <div className="fb-post__foot">
-              <span>♥ — · — SHARES</span>
-              <span>ANG SIDLAKAN · 2025</span>
+            <div className="fb-post__art">
+              <iframe
+                src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAngSidlakanPublication%2Fvideos%2F1301625988128812%2F&show_text=false&width=560&t=0"
+                width="100%"
+                height="280"
+                style={{ border: "none", overflow: "hidden" }}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
             </div>
           </div>
 
           <div>
-            <div className="sidebar__h">Selected clips</div>
+            <div className="sidebar__h">Selected Write-ups</div>
             <div className="clip-list">
-              {MEDIA_CLIPS.map((c) => (
-                <div className="clip" key={c.num}>
-                  <div className="clip__num">{c.num}</div>
-                  <div>
-                    <div className="clip__t">{c.t}</div>
-                    <div className="clip__s">{c.s}</div>
-                  </div>
-                  <div className="clip__pub">{c.pub}</div>
-                </div>
-              ))}
+              {MEDIA_CLIPS.map((c) => {
+                const inner = (
+                  <>
+                    <div className="clip__num">{c.num}</div>
+                    <div>
+                      <div className="clip__t">{c.t}</div>
+                      <div className="clip__s">{c.s}</div>
+                    </div>
+                    <div className="clip__pub">{c.pub}</div>
+                  </>
+                );
+                return c.link ? (
+                  <a className="clip" key={c.num} href={c.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>{inner}</a>
+                ) : (
+                  <div className="clip" key={c.num}>{inner}</div>
+                );
+              })}
             </div>
+            <a
+              href="https://www.facebook.com/AngSidlakanPublication"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="see-more"
+            >
+              See more — Ang Sidlakan Publication
+            </a>
           </div>
 
           <div className="yt">
-            <div className="yt__label">YOUTUBE · ANCHOR REEL — ANG SUBANG</div>
-            <button className="yt__play" aria-label="Play"><I.play /></button>
+            <div className="yt__label">FACEBOOK · ANCHOR REEL — ANG SIDLAKAN</div>
+            <iframe
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAngSidlakanPublication%2Fvideos%2F534166283094061%2F&show_text=false&width=560&t=0"
+              width="100%"
+              height="314"
+              style={{ border: "none", display: "block" }}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+            />
           </div>
         </aside>
       </div>

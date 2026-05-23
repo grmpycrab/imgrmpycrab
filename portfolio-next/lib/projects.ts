@@ -14,25 +14,28 @@ export const DEV_STACK: Array<[string, string]> = [
 
 export const DEV_PROJECTS: DevProject[] = [
   {
-    name: "EchoNotes",
+    name: "Harmonica",
+    link: "https://github.com/grmpycrab/Harmonica-v2",
     tag: "Mobile · Flutter",
-    desc: "Voice-first notebook with on-device transcription and BLE accessory sync.",
-    year: "2025",
+    desc: "A personal music learning app for music theory learning. Features chord generation based on mood and genre.",
+    year: "2026",
     stack: "Flutter · Firebase · Whisper",
   },
   {
-    name: "Campusly",
+    name: "TrekScan+",
+    link: "https://github.com/grmpycrab/TrekScanPlus/tree/main/hamiguitan_trekscan_plus",
     tag: "Mobile · Flutter",
-    desc: "Student-org coordination app — events, attendance, points, push.",
+    desc: "Hamiguitan trail map and guidebook with offline maps, GPS tracking, and booking integration. Integrated with Hamiguitan Admin Dashboard for real-time updates and reporting.",
     year: "2024",
     stack: "Flutter · Firebase",
   },
   {
-    name: "Sari-Sari OS",
-    tag: "Web · Next.js",
-    desc: "Inventory & POS for neighborhood stores. Offline-first PWA.",
-    year: "2024",
-    stack: "Next.js · IndexedDB",
+    name: "Admin Dashboard",
+    link: "https://github.com/grmpycrab/TrekScanPlus/tree/main/Admin%20Dashboard/Mt.-Hamiguitan-TrekScan-Admin-Portal",
+    tag: "Web · React Vite",
+    desc: "Hamiguitan booking dashboard for staff — reservations, QR check-in, sales reports.",
+    year: "2025",
+    stack: "React · Vite · Firebase",
   },
 ];
 
@@ -76,8 +79,9 @@ export const DESIGN_PROCESS: Array<[string, string, string]> = [
 ];
 
 export const MEDIA_CLIPS: MediaClip[] = [
-  { num: "01", t: "Literary Editor — Ang Sidlakan", s: "Editor · Ongoing", pub: "Ang Sidlakan · DOrSU · 2025" },
-  { num: "02", t: "Video Editor — Ang Sidlakan", s: "Editor · Ongoing", pub: "Ang Sidlakan · DOrSU · 2025" },
-  { num: "03", t: "News Writer — Ang Sidlakan", s: "Writer", pub: "Ang Sidlakan · DOrSU · 2024" },
-  { num: "04", t: "News Anchor — Ang Subang", s: "News Coverage", pub: "USC · DOrSU · 2023 — 2024" },
+  { num: "01", t: "Unlinear: Beyond the Regular — Ang Sidlakan", s: "Editor · Ongoing", pub: "Ang Sidlakan · DOrSU · 2025", link: "https://www.facebook.com/share/p/1GuG497afg/" },
+  { num: "02", t: "Sugilanon | 7.4 over 10 — Ang Sidlakan", s: "Editor · Ongoing", pub: "Ang Sidlakan · DOrSU · 2025", link: "https://www.facebook.com/share/p/1ZtRJrd4MB/" },
+  { num: "03", t: "Think Pieces | in Silent Admiration — Ang Sidlakan", s: "Writer", pub: "Ang Sidlakan · DOrSU · 2025", link: "https://www.facebook.com/share/p/1EhQqnpaVn/" },
+  { num: "04", t: "Unyield: Let the World See Us — Ang Sidlakan", s: "News Coverage", pub: "Ang Sidlakan · DOrSU · 2026", link: "https://www.facebook.com/share/p/1TTXrBqzvV/" },
+  { num: "05", t: "Ghost Project: Thesis for Sale — Ang Sidlakan", s: "Anchor", pub: "Ang Sidlakan · DOrSU · 2025", link: "https://www.facebook.com/share/p/1HpGsaK81E/" },
 ];
