@@ -86,7 +86,7 @@ export function Developer() {
 
         <div className="card" style={{ gridColumn: "span 12", display: "grid", gridTemplateColumns: "1fr auto", gap: 24, alignItems: "center" }}>
           <div>
-            <div className="card__tag">// github</div>
+            <div className="card__tag">{'// github'}</div>
             <div className="card__title" style={{ marginTop: 6 }}>40+ public repos · main + small open-source</div>
             <div className="card__desc">From small Flutter widgets to a CLI for renaming photo batches by EXIF tag.</div>
           </div>

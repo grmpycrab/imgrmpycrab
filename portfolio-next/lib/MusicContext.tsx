@@ -95,7 +95,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
     const audio = audioRef.current;
     if (!audio || audioCtxRef.current) return; // already wired
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const CtxClass: typeof AudioContext = window.AudioContext ?? (window as any).webkitAudioContext;
     if (!CtxClass) return;
 
